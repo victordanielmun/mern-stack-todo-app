@@ -10,11 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(taskRoutes);
-// const logger = (req, res, next) => {
-//   console.log("logger runing");
-//   console.log(req.method);
-//   next();
-// }
 
 // Routes (rutas)
 app.get("/", (req, res) => {
