@@ -5,19 +5,22 @@ const router = express.Router();
 
 //create a task
 
-router.post("/api/tasks", createTask);
+router.route("/").get(getTasks).post(createTask)
+router.route("/:id").get(getTask).delete(deleteTask).put(updateTask)
 
-  //Get tasks
-router.get("/api/tasks", getTasks);
+// router.post("/", createTask);
 
-//get Task
+//   //Get tasks
+// router.get("/", getTasks);
 
-router.get("/api/tasks/:id", getTask);
+// //get Task
 
-//delete Task
-router.delete("/api/tasks/:id", deleteTask);
+// router.get("/:id", getTask);
 
-//delete Task
-router.put("/api/tasks/:id", updateTask);
+// //delete Task
+// router.delete("/:id", deleteTask);
+
+// //delete Task
+// router.put("/:id", updateTask);
 
 module.exports = router;
