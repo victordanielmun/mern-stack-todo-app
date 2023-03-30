@@ -20,7 +20,7 @@ router.route("/:id").get(getTask).delete(deleteTask).put(updateTask)
 // //delete Task
 // router.delete("/:id", deleteTask);
 
-// //delete Task
+// //put Task
 // router.put("/:id", updateTask);
 
 module.exports = router;

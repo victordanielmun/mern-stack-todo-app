@@ -60,7 +60,7 @@ section {
 }
 .--flex-end {
   display: flex;
-  justify-content: flex-end;
+  justify-cgit ontent: flex-end;
   align-items: center;
 }
 .--flex-between {
