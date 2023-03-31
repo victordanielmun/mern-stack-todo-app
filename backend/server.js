@@ -2,13 +2,15 @@ const dotenv = require("dotenv").config();
 const express = require("express");
 const connectDB = require("./config/connectDB.js");
 const Task = require("./model/taskModel.js");
-const taskRoutes = require("./routes/taskRoute.js")
+const taskRoutes = require("./routes/taskRoute.js");
+const cors = require("cors");
 
 const app = express();
 
 //Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.use("/api/tasks", taskRoutes);
 
 // Routes (rutas)
